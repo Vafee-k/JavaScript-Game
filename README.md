@@ -1,2 +1,0 @@
-# JavaScript-Game
-Class assigment
