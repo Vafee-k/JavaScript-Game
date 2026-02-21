@@ -1,0 +1,75 @@
+<!-- Your Name: coffee -->
+<!-- Declare the document type as HTML5 -->
+<!DOCTYPE html>
+<!-- Open the HTML tag -->
+<html lang="en">
+
+<!-- Open the head section -->
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Make the page responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>My Meme Page + Dice Game</title>
+
+  <!-- Link the external CSS file -->
+  <link rel="stylesheet" href="main2.css">
+
+<!-- Close the head section -->
+</head>
+
+<!-- Open the body section -->
+<body>
+
+  <!-- Page title -->
+  <h1>Welcome to My Meme Page 😄</h1>
+
+  <!-- Meme image ABOVE the game -->
+  <img id="memeImage"
+       src="https://media1.tenor.com/m/CwSScpmEr_IAAAAd/me-who-me.gif"
+       alt="Me who me meme">
+
+  <!-- Dice Game section -->
+  <h2>Quarks Casino 🎲</h2>
+
+  <p>
+    Enter your name (required). Optional: lucky phrase for palindrome check.
+    Then roll the dice.
+  </p>
+
+  <!-- Form (MUST use submit for input) -->
+  <form id="playerForm" onsubmit="return savePlayerInfo();">
+
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName">
+
+    <br><br>
+
+    <label for="luckyPhrase">Lucky Phrase (palindrome check):</label>
+    <input type="text" id="luckyPhrase" name="luckyPhrase">
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <br>
+
+  <!-- Roll Dice button -->
+  <button type="button" onclick="playDiceGame();">Roll Dice</button>
+
+  <br><br>
+
+  <!-- Output area (ALL output goes here) -->
+  <p id="gameOutput">Game output will show here.</p>
+
+  <!-- Link JavaScript file -->
+  <script src="code.js"></script>
+
+<!-- Close the body section -->
+</body>
+<!-- Close the HTML tag -->
+</html>
