@@ -1,0 +1,105 @@
+<!-- Your Name: coffee -->
+<!-- Declare the document type as HTML5 -->
+<!DOCTYPE html>
+<!-- Open the HTML tag -->
+<html lang="en">
+<!-- Open the head section -->
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8">
+  <!-- Make the page responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>My Meme Page + Dice Game</title>
+
+  <!-- Basic CSS to keep everything on the LEFT side -->
+  <style>
+    /* Style the whole page */
+    body {
+      font-family: Arial, sans-serif; /* Basic font */
+      text-align: left; /* LEFT aligned */
+      margin: 0; /* Remove default margin */
+      padding: 20px; /* Add some space from the edges */
+      background-color: #b6c9f7; /* Light background */
+      color: #111; /* Text color */
+    }
+
+    /* Keep the meme image above and simple */
+    #memeImage {
+      max-width: 300px; /* Keep image from being huge */
+      display: block; /* Put image on its own line */
+      margin-bottom: 15px; /* Space under the image */
+    }
+
+    /* Output box look (still basic) */
+    #gameOutput {
+      white-space: pre-line; /* Keeps \n line breaks */
+      padding: 10px; /* Space inside */
+      border: 1px solid #ccc; /* Simple border */
+      background: white; /* White background */
+      max-width: 420px; /* Keep it readable */
+    }
+  </style>
+<!-- Close the head section -->
+</head>
+
+<!-- Open the body section -->
+<body>
+
+  <!-- Page title -->
+  <h1>Welcome to My Meme Page 😄</h1>
+
+  <!-- Meme image placed ABOVE the game -->
+  <img id="memeImage"
+       src="https://media1.tenor.com/m/CwSScpmEr_IAAAAd/me-who-me.gif"
+       alt="Me who me meme">
+
+  <!-- Dice Game title -->
+  <h2>Quarks Casino 🎲</h2>
+
+  <!-- Instructions -->
+  <p>
+    Enter your name (required). Optional: enter a lucky phrase for palindrome message.
+    Then roll the dice.
+  </p>
+
+  <!-- MUST use form with submit for ALL user input -->
+  <!-- NO event listeners, so we use onsubmit to call a function stored in code.js -->
+  <form id="playerForm" onsubmit="return savePlayerInfo();">
+    <!-- Label for player name -->
+    <label for="playerName">Player Name:</label>
+    <!-- Name input -->
+    <input type="text" id="playerName" name="playerName">
+
+    <br><br>
+
+    <!-- Label for lucky phrase -->
+    <label for="luckyPhrase">Lucky Phrase (palindrome check):</label>
+    <!-- Lucky phrase input -->
+    <input type="text" id="luckyPhrase" name="luckyPhrase">
+
+    <br><br>
+
+    <!-- Submit button (required) -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <br>
+
+  <!-- Button to roll dice -->
+  <!-- NO event listeners, so we use onclick -->
+  <button type="button" onclick="playDiceGame();">Roll Dice</button>
+
+  <br><br>
+
+  <!-- Output area (ALL output must be shown here using textContent/innerHTML) -->
+  <p id="gameOutput">Game output will show here.</p>
+
+  <!-- Link the JavaScript file -->
+  <script src="code.js"></script>
+
+<!-- Close the body section -->
+</body>
+<!-- Close the HTML tag -->
+</html>
